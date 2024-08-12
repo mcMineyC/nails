@@ -29,6 +29,12 @@ class NavigationSidebar extends StatelessWidget {
                   onPressed: () => Scaffold.of(context).openDrawer(),
                 ),
               ),
+              if (Beamer.of(context).currentPages.last.name != "/") 
+              IconButton(
+                color: Theme.of(context).colorScheme.onSurface,
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () => Beamer.of(context).beamBack(),
+              ),
             ],
           ),
         ),
